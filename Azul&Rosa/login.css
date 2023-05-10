@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    background-color: #0c1022;}
+
+.login_form_container{
+    position: relative; /*posição da figura*/
+    width: 400px; /*largura*/
+    height: 470px; /*altura*/
+    max-width: 400px;
+    max-width: 470px;
+    background: #040717; /* cor do retangulo*/
+    border-radius: 50px 5px; /*arredontamento das bordas*/
+    display: flex;
+    align-items: center; /*alinhar os itens no meio do retangulo (porem pela borda)*/
+    justify-content: center; /* centraliza os itens que antes estavam na borda da figura*/
+    overflow: hidden;
+    margin-top: 100px; /*posiçao da figura */
+}
+
+.login_form_container::before /*animaçao rosa*/ {
+      
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ee00ff); /*cor da animação*/
+    animation: rotate_border 6s linear infinite;
+}
+
+.login_form_container::after /*animação azul*/ {
+      
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: rotate_border 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes rotate_border /*rotação das animaçoes*/ {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.login_form /*estilização do login*/ {
+    position: absolute; /*tamanho do retangulo*/
+    content: '';
+    background-color: #0c1022;
+    border-radius: 50px 5px;
+    inset: 5px;
+    padding: 50px 40px /*posição do login*/;
+    z-index: 10;
+    color: #00ccff;}
+
+    h2 /*login  palavra */ {
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center; /*centralizar*/
+    }
+
+    .input_group{
+        margin-top: 40px; /*posição username,password..etc*/
+        position:relative;
+        display:flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .input_text{
+        width: 95%;
+        height: 30px;
+        background: transparent; /*barra de preenchimento de dados*/
+        border: none; /*borda invisivel*/
+        outline: none;
+        border-bottom: 1px solid #00ccff;
+        font-size: 20px; /*tamanho da font username/password*/
+        padding-left: 10px; /*username/password posição*/
+        color: #00ccff;}
+
+    ::placeholder /*estilizição username/password*/ { 
+        font-size: 15px;
+        color: #00ccff52;
+        letter-spacing: 1px;
+        }
+
+    .fa /*icones*/
+    {font-size: 20px;}
+
+
+    #login_button /*submit forgot password*/ {
+        position: relative;
+        width: 300px;
+        height: 40px;
+        transition: 1s;
+        margin-top: 70px; /*posição submit/forgot password*/
+    }
+
+    #login_button /*estilização submit*/ a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        z-index: 10;
+        cursor: pointer;
+        font-size: 22px;
+        letter-spacing: 2px;
+        border: 1px solid #00ccff;
+        border-radius: 50px;
+        background-color: #0c1022;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .fotter /* posicionamento ultimas opçoes do login (footer) */ {
+        margin-top: 30px; /* posição das opções*/
+        display: flex;
+        justify-content: space-between; /*espaçameto das opçoes*/
+    
+    }
+
+    .fotter a /*definindo tamanho do footer*/ {
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .glowIcon {
+        text-shadow: 0 0 10px #00ccff;
+    }
+        
+
+
+
+
+
+
+
